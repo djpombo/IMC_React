@@ -42,6 +42,9 @@ class App extends Component {
 
     }
     else {
+      this.setState({msgAlt: ''});
+      this.setState({msgPeso: ''});
+
       imc = (peso / (altura * altura)).toFixed(1);
 
       this.formataResult(imc);
