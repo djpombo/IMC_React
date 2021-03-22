@@ -12,7 +12,8 @@ class App extends Component {
       altura: '',
       msg: '',
       acumulator: 0,
-      adjust: false,
+      msgAlt: '',
+      msgPeso: '',
       pesoIdeal: 0
     }
     this.calcIMC = this.calcIMC.bind(this);
@@ -30,9 +31,14 @@ class App extends Component {
     this.setState({ pesoIdeal: 0 });
     this.setState({ acumulator: 0.1 });
 
-    if (peso === '' || altura === '') {
+    if (altura === '' ){
+      
+      this.setState({ msgAlt: `Preencha o campo altura` });
 
-      this.setState({ msg: 'preencha os campos!' });
+    }
+    else if(peso === ''){
+
+      this.setState({ msgPeso: 'preencha o campo peso' });
 
     }
     else {
@@ -142,10 +148,13 @@ class App extends Component {
           <form onSubmit={this.calcIMC}>
             <label>Altura</label>
             <input type="number" value={this.state.altura} autoFocus autoComplete="off"
-              onChange={(e) => this.setState({ altura: e.target.value })} />
+            placeholder="altura em Metros" onChange={(e) => this.setState({ altura: e.target.value })} />
+            {this.state.msgAlt !== '' ? <small>{this.state.msgAlt}</small>: <small></small>}
+
             <label>Peso</label>
             <input type="number" value={this.state.peso} autoComplete="off"
-              onChange={(e) => this.setState({ peso: e.target.value })} />
+              placeholder="Peso em Kg" onChange={(e) => this.setState({ peso: e.target.value })} />
+              {this.state.msgPeso !== '' ? <small>{this.state.msgPeso}</small>: <small></small>}
             <button type="submit">Calcular</button>
           </form><br />
         </div>
