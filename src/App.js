@@ -130,17 +130,9 @@ class App extends Component {
       pesoIdeal = peso - pesoAdd;
     }
 
-
-
     this.setState({ pesoIdeal });
 
-
-
-
-
   }
-
-
 
   render() {
     return (
