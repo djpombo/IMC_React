@@ -94,9 +94,18 @@
     color: white;
     font-size: 14px;
     font-weight: 700;
+    text-align: justify;
 }
 
 .result h3{
     font-size: 22px;
     font-weight: bold;
+}
+
+.result p{
+    padding: 5px 0px 5px 0px;
+}
+
+.msg{
+    max-width: 260px;
 }

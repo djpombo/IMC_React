@@ -163,7 +163,7 @@ class App extends Component {
         {this.state.msg !== '' ?
           <div className="result">
             <h3>IMC: {this.state.imc}</h3>
-            <p>{this.state.msg}</p>
+            <p className="msg">{this.state.msg}</p>
              
               {(this.state.imc === '25,0') ?  <p>Este é seu peso ideal</p> : <p>Seu peso ideal é: {this.state.pesoIdeal}Kg</p>}
           </div>
