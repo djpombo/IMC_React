@@ -148,7 +148,7 @@ class App extends Component {
           <form onSubmit={this.calcIMC}>
             <label>Altura</label>
             <input type="number" value={this.state.altura} autoFocus autoComplete="off"
-            placeholder="altura em Metros" onChange={(e) => this.setState({ altura: e.target.value })} />
+            placeholder="Altura em Metros" onChange={(e) => this.setState({ altura: e.target.value })} />
             {this.state.msgAlt !== '' ? <small>{this.state.msgAlt}</small>: <small></small>}
 
             <label>Peso</label>
