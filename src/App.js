@@ -144,7 +144,7 @@ class App extends Component {
       <div>
 
         <div className="container">
-          <h3>Calcule o seu IMC:</h3><br />
+          <h3>Calcule seu IMC:</h3><br />
           <form onSubmit={this.calcIMC}>
             <label>Altura</label>
             <input type="number" value={this.state.altura} autoFocus autoComplete="off"
